@@ -24,14 +24,12 @@ current1El.textContent = 0;
 current2El.textContent = 0;
 //declare score for hold the value
 let score1 = 0;
+let currentVal = 0;
 
 //Rolling the dice
 btnRollEl.addEventListener("click", function () {
   const randomDice = Math.trunc(Math.random() * 6 + 1);
   //math.random()*6 --> 0-5, +1--> 1-6, -->math.trunc -->format
-  //
-  console.log(randomDice);
-
   //dice is showing
   diceEl.classList.remove("hidden");
   diceEl.src = `dice-${randomDice}.png`;
@@ -43,14 +41,18 @@ btnRollEl.addEventListener("click", function () {
   } else {
     //current score showing
     score1 += randomDice;
-    console.log(score1);
     current1El.textContent = score1;
+    console.log("score1:", score1);
   }
 });
 
 //hold the score
 btnHoldEl.addEventListener("click", function () {
-  score1El.textContent = current1El.textContent;
+  score1 = parseInt(score1El.textContent);
+  currentVal = parseInt(current1El.textContent);
+  score1 = score1 + currentVal;
+  score1El.textContent = score1;
   current1El.textContent = 0;
-  //swich to other player
+  currentVal = 0;
+  score1 = 0;
 });
