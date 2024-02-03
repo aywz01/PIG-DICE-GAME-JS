@@ -48,11 +48,23 @@ btnRollEl.addEventListener("click", function () {
 
 //hold the score
 btnHoldEl.addEventListener("click", function () {
-  score1 = parseInt(score1El.textContent);
+  score1 = parseInt(score1El.textContent); //turning the text content into number to be able to do summation
   currentVal = parseInt(current1El.textContent);
   score1 = score1 + currentVal;
   score1El.textContent = score1;
   current1El.textContent = 0;
   currentVal = 0;
   score1 = 0;
+});
+
+//new game button
+btnNewEl.addEventListener("click", function () {
+  //First apperance of the page
+  //Empty all the scores,dice and values
+  score1El.textContent = 0;
+  score2El.textContent = 0;
+  diceEl.classList.add("hidden");
+  current1El.textContent = 0;
+  current2El.textContent = 0;
+  //background also should turn to blue if someone win and it was black
 });
