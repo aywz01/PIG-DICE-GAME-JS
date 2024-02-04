@@ -47,22 +47,22 @@ main {
   overflow: hidden;
   text-align: center;
 }
-.player-active {
+.player--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
-.player-active .name {
+.player--active .name {
   font-weight: 700;
 }
-.player-active .score {
+.player--active .score {
   font-weight: 400;
 }
-.player-active .current {
+.player--active .current {
   opacity: 1;
 }
-.player-winner {
+.player--winner {
   background-color: #2f2f2f;
 }
-.player-winner .name {
+.player--winner .name {
   font-weight: 700;
   color: #368fc7;
 }
@@ -96,13 +96,13 @@ main {
   transition: all 0.75s;
   border-radius: 9px;
 }
-.current-header {
+.current--header {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.7rem;
   color: #ddd;
 }
-.current-score {
+.current--score {
   font-size: 3.5rem;
 }
 /* BUTTONS */
@@ -128,13 +128,13 @@ main {
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
-.btn-new {
+.btn--new {
   top: 4rem;
 }
-.btn-roll {
+.btn--roll {
   top: 39.3rem;
 }
-.btn-hold {
+.btn--hold {
   top: 46.1rem;
 }
 .btn:active {
