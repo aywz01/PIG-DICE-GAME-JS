@@ -78,7 +78,17 @@ btnHoldEl.addEventListener("click", function () {
   current1El.textContent = 0;
   currentVal = 0;
   score1 = 0;
+  //after pressing hold the current player will change
+
   //add the condition where score is bigger equal to 100
+  if (parseInt(score1El.textContent) >= 100) {
+    diceEl.classList.add("hidden");
+    //activete these
+    player1El.classList.remove("player--active");
+    player1El.classList.add("player--winner");
+
+    //add maybe an alert saying current player wins
+  }
 });
 
 //new game button
