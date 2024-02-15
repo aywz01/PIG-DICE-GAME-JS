@@ -1,4 +1,8 @@
 "use strict";
+/*TODO*/
+/*make it responsive in mobile devices*/
+//Add instructions like an ? symbol that pops up
+
 //selecting elements
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
@@ -95,7 +99,7 @@ btnHoldEl.addEventListener("click", function () {
       scores[activePlayer];
 
     // Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // Finish the game
       playing = false;
       diceEl.classList.add("hidden");
